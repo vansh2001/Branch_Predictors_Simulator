@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8DC0A0B5219B8AEC004C5987 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0A0B4219B8AEC004C5987 /* main.cpp */; };
+		8DC0A0BD219B8D86004C5987 /* sim_bp.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0A0BB219B8D86004C5987 /* sim_bp.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,9 @@
 
 /* Begin PBXFileReference section */
 		8DC0A0B1219B8AEC004C5987 /* 463_ Branch Predictors Simulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "463_ Branch Predictors Simulator"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DC0A0B4219B8AEC004C5987 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8DC0A0BB219B8D86004C5987 /* sim_bp.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sim_bp.cc; sourceTree = "<group>"; };
+		8DC0A0BC219B8D86004C5987 /* sim_bp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sim_bp.h; sourceTree = "<group>"; };
+		8DC0A0BE219B8E67004C5987 /* gcc_trace.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gcc_trace.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,9 @@
 		8DC0A0B3219B8AEC004C5987 /* 463_ Branch Predictors Simulator */ = {
 			isa = PBXGroup;
 			children = (
-				8DC0A0B4219B8AEC004C5987 /* main.cpp */,
+				8DC0A0BB219B8D86004C5987 /* sim_bp.cc */,
+				8DC0A0BC219B8D86004C5987 /* sim_bp.h */,
+				8DC0A0BE219B8E67004C5987 /* gcc_trace.txt */,
 			);
 			path = "463_ Branch Predictors Simulator";
 			sourceTree = "<group>";
@@ -118,7 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC0A0B5219B8AEC004C5987 /* main.cpp in Sources */,
+				8DC0A0BD219B8D86004C5987 /* sim_bp.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
