@@ -23,6 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8D6983A3219E932300F0B744 /* jpeg_trace.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jpeg_trace.txt; sourceTree = "<group>"; };
 		8DC0A0B1219B8AEC004C5987 /* 463_ Branch Predictors Simulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "463_ Branch Predictors Simulator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC0A0BB219B8D86004C5987 /* sim_bp.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sim_bp.cc; sourceTree = "<group>"; };
 		8DC0A0BC219B8D86004C5987 /* sim_bp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sim_bp.h; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 		8DC0A0B3219B8AEC004C5987 /* 463_ Branch Predictors Simulator */ = {
 			isa = PBXGroup;
 			children = (
+				8D6983A3219E932300F0B744 /* jpeg_trace.txt */,
 				8DC0A0BB219B8D86004C5987 /* sim_bp.cc */,
 				8DC0A0BC219B8D86004C5987 /* sim_bp.h */,
 				8DC0A0BE219B8E67004C5987 /* gcc_trace.txt */,
