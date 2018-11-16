@@ -92,24 +92,31 @@ int main (int argc, char* argv[])
     
     char str[2];
     unsigned long int size = 0;
-    unsigned long int pc_bits = 0;
+    unsigned long int pc_bits;
     gShare *gshare;
     gshare = new gShare();
+    gshare->GBH_size = 0;
+    gshare->BHR_bits = 0;
     
     if(!strcmp(params.bp_name, "bimodal")){
         //printf("bimodal\n");
         size = params.M2;
-        
+        pc_bits = 0;
+        //printf("%d, ", size);
     } else {
         //printf("gshare\n");
         size = params.M1;
         pc_bits = params.N;
         gshare->GBH_size = pc_bits;
+        //printf("%d, ", size);
     }
+    //printf("%d, ", pc_bits);
     
     //printf("%s", params.bp_name);
-    int c_predictions = 0;
-    int mispredictions = 0;
+    int c_predictions;
+    c_predictions = 0;
+    //int mispredictions= 0;
+    
     initialize_vector(size);
     while(fscanf(FP, "%lx %s", &addr, str) != EOF)
     {
@@ -119,12 +126,11 @@ int main (int argc, char* argv[])
         branch_check(addr, size, pc_bits, outcome, gshare);
         
         //index_extract(addr, params.M2);
-        if (outcome == 't')
+        if (outcome == 't'){}
             //printf("%lx %s\n", addr, "t");           // Print and test if file is read correctly
-            printf("");
-        else if (outcome == 'n')
+        else if (outcome == 'n'){}
             //printf("%lx %s\n", addr, "n");          // Print and test if file is read correctly
-            mispredictions++;
+            //mispredictions++;
         /*************************************
             Add branch predictor code here
         **************************************/
@@ -136,6 +142,7 @@ int main (int argc, char* argv[])
     cout << "number of mispredictions: " << gshare->misprediction << endl;
     printf("mispredictions rate:\t  %.2f%%\n", mispre);
     
+    //printf("%.2f\n", mispre);
     
     print_predictor(size);
     

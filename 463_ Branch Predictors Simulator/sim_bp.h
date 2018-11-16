@@ -8,9 +8,9 @@ using namespace std;
 
 typedef struct bp_params{
     unsigned long int K;
-    unsigned long int M1;
-    unsigned long int M2;
-    unsigned long int N;
+    unsigned long int M1=0;
+    unsigned long int M2=0;
+    unsigned long int N=0;
     char*             bp_name;
 }bp_params;
 
@@ -18,10 +18,11 @@ typedef struct bp_params{
 class gShare {
 public:
     unsigned long int index;
-    unsigned long int GBH_size = 0;
-    unsigned long int BHR_bits=0;
-    int misprediction = 0;
+    unsigned long int GBH_size;
+    unsigned long int BHR_bits;
+    int misprediction;
 };
+
 
 vector <int> predictor;
 
@@ -36,7 +37,7 @@ long unsigned int index_extract(unsigned long int index, unsigned long int size)
     unsigned long int index_final; //store final value
     index_final = index >> 2; //right shift by 2
     unsigned long int shift_value = 0;
-    for(int i = 0; i < size; i++){
+    for(unsigned long int i = 0; i < size; i++){
         shift_value = shift_value << 1; //left shift one
         shift_value = shift_value | 1; //or with 1
     }
@@ -103,7 +104,7 @@ void print_predictor(unsigned long int size){
     unsigned long int predic_size;
     predic_size = pow(2,size);
     cout << "FINAL BIMODAL CONTENTS"<< endl;
-    for(int i =0; i < predic_size; i++){
+    for(unsigned long int i =0; i < predic_size; i++){
         cout << i << "\t\t" << predictor.at(i) << endl;
     }
 }
